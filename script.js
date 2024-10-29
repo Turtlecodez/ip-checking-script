@@ -2,7 +2,7 @@ async function fetchIP() {
   try {
       const response = await fetch('https://api.ipify.org?format=json');
       const data = await response.json();
-      const allowedIPs = ['0.0.0.0']; // Example IPs, replace these with your whitelist of IPs, likely your own
+      const allowedIPs = ['999.999.9.9', '888.888.8.8']; // Example IPs, replace these with your whitelist of IPs, likely your own
       if (allowedIPs.includes(data.ip)) {
         console.log('User is on a whitelisted IP.');
       } else {
